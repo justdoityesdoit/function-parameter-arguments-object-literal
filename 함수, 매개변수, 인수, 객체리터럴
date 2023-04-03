@@ -1,0 +1,150 @@
+function addNumbers(num1, num2) {
+  return num1 + num2;
+}
+
+let result = addNumbers(3, 5);
+console.log(result); // Output: 8
+
+let a = 10;
+let b = 20;
+result = addNumbers(a, b);
+console.log(result); // Output: 30
+
+
+
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+
+greet("John"); // Output: Hello, John!
+greet("Sarah"); // Output: Hello, Sarah!
+
+
+
+let person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+  address: {
+    street: "123 Main St",
+    city: "Anytown",
+    state: "CA",
+    zip: "12345"
+  }
+};
+
+console.log(person.firstName); // Output: John
+console.log(person.address.city); // Output: Anytown
+
+
+
+let person1 = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30
+};
+
+let person2 = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30
+};
+
+let person3 = {
+  firstName: "Jane",
+  lastName: "Doe",
+  age: 25
+};
+
+console.log(person1 == person2); // Output: false
+console.log(person1 === person2); // Output: false
+console.log(person1 == person3); // Output: false
+console.log(person1 === person3); // Output: false
+
+// To compare objects in JavaScript, you can use the JSON.stringify() method
+console.log(JSON.stringify(person1) == JSON.stringify(person2)); // Output: true
+console.log(JSON.stringify(person1) === JSON.stringify(person2)); // Output: true
+console.log(JSON.stringify(person1) == JSON.stringify(person3)); // Output: false
+console.log(JSON.stringify(person1) === JSON.stringify(person3)); // Output: false
+
+
+
+function calculateArea(length, width) {
+  return length * width;
+}
+
+let rectangleArea = calculateArea(10, 5);
+console.log(rectangleArea); // Output: 50
+
+let squareArea = calculateArea(5, 5);
+console.log(squareArea); // Output: 25
+
+
+
+function sayHello(name) {
+  console.log(`Hello, ${name}!`);
+}
+
+let firstName = "John";
+let lastName = "Doe";
+
+sayHello(firstName + " " + lastName); // Output: Hello, John Doe!
+
+sayHello("Mary"); // Output: Hello, Mary!
+
+function getFullName(firstName, lastName) {
+  return firstName + " " + lastName;
+}
+
+sayHello(getFullName("Adam", "Smith")); // Output: Hello, Adam Smith!
+
+
+
+let person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+  address: {
+    street: "123 Main St",
+    city: "Anytown",
+    state: "CA",
+    zip: "12345"
+  }
+};
+
+console.log(person.firstName); // Output: John
+console.log(person["lastName"]); // Output: Doe
+console.log(person.address.city); // Output: Anytown
+
+person.phone = "555-1234"; // Add a new property to the object
+console.log(person.phone); // Output: 555-1234
+
+delete person.age; // Remove a property from the object
+console.log(person.age); // Output: undefined
+
+
+
+let person1 = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30
+};
+
+let person2 = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30
+};
+
+let person3 = person1;
+
+console.log(person1 == person2); // Output: false
+console.log(person1 === person2); // Output: false
+console.log(person1 == person3); // Output: true
+console.log(person1 === person3); // Output: true
+
+person1.age = 40;
+console.log(person3.age); // Output: 40
+
+
+
